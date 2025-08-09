@@ -1,0 +1,83 @@
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-header {
+  text-align: center;
+  background-color: rgb(100, 100, 231);
+  color: white;
+  padding: 20px 0;
+}
+
+.profile-main {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.job-section h2 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.job-table th,
+.job-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.job-table thead {
+  background-color:  rgb(100, 100, 231);
+  color: white;
+}
+
+.job-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.job-actions button {
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.85;
+}
+
+.no-jobs-msg {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+
+.add-job-link {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.add-job-link:hover {
+  text-decoration: underline;
+}

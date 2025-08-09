@@ -1,0 +1,78 @@
+.applied-body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f9f9f9;
+}
+
+.applied-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.applied-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.applied-jobs-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.applied-job-card {
+  padding: 20px;
+  background: #f1f1f1;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.job-company {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.job-position {
+  font-weight: bold;
+}
+
+.job-location,
+.job-date,
+.job-type,
+.job-description {
+  font-weight: bold;
+}
+
+.delete-form {
+  margin-top: 10px;
+}
+
+.delete-btn {
+  padding: 6px 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.no-jobs-msg {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+}

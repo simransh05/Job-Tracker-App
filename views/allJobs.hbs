@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/jobs.css"> 
+</head>
+
+<body>
+    <div class="navbar-container">
+        {{> navbar}}
+    </div>
+
+    <div class="all-jobs-container">
+        <h2 class="section-title">All Job Posted</h2>
+
+        {{#each jobs}}
+        <div class="job-card">
+            <h3 class="job-title">{{this.position}} at {{this.company}}</h3>
+            <p class="job-detail"><strong>Location:</strong> {{this.location}}</p>
+            <p class="job-detail"><strong>Type:</strong> {{this.job_type}}</p>
+            <p class="job-detail"><strong>Last Date Of Apply:</strong> {{this.application_date}}</p>
+            <p class="job-detail"><strong>Notes:</strong> {{this.notes}}</p>
+            <p class="job-detail"><strong>Posted By:</strong> {{this.username}}</p>
+
+            <form action="/apply-job" method="POST" class="apply-form">
+                <input type="hidden" name="job_id" value="{{job_id}}">
+                <button type="submit" class="apply-button">Apply</button>
+            </form>
+
+            <hr class="divider" />
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>

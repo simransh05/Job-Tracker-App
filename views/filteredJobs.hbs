@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/filtered.css">
+</head>
+
+<body class="filtered-body">
+    {{>navbar}}
+
+    <div class="filtered-container">
+        <h2 class="filtered-heading">Filtered Jobs</h2>
+
+        {{#if jobs.length}}
+        <ul class="filtered-list">
+            {{#each jobs}}
+            <li class="filtered-item">
+                <strong>{{this.company}}</strong> - {{this.position}} ({{this.location}}) [{{this.job_type}}]
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <p class="filtered-no-jobs">No jobs found matching the filter.</p>
+        {{/if}}
+
+        <a href="/jobs/filter" class="filtered-back-link">Back to Filter Form</a>
+    </div>
+</body>
+
+</html>

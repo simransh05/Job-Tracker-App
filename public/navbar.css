@@ -1,0 +1,55 @@
+/* Global Reset (Optional, if not already present) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px; /* spacing from top and sides */
+    background-color: #c912da;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
+
+/* Logo */
+.nav-logo {
+    height: 70%;
+    width: 110px;
+    border: 1px solid white;
+}
+
+
+/* Center links */
+.nav-center {
+    display: flex;
+    gap: 20px;
+}
+
+/* Right-aligned link */
+.nav-right {
+    display: flex;
+}
+
+/* All links */
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    color: #000;
+}

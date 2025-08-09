@@ -1,0 +1,116 @@
+/* Common layout */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper */
+.filter-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.filter-title,
+.history-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Layout */
+.filter-form .form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Button */
+.btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.center-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* optional spacing */
+}
+
+.center-btn button {
+  padding: 8px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.center-btn button:hover {
+  background-color: #5a54e0;
+}
+
+
+.btn-delete {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.btn-delete:hover {
+  background-color: #b52a37;
+}
+
+/* History List */
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  background-color: #fff;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

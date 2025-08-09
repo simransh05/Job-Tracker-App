@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Applied Jobs</title>
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="/applied.css"> 
+</head>
+
+<body class="applied-body">
+  {{>navbar}}
+
+  <div class="applied-container">
+    <h1 class="applied-heading">Applied Jobs for {{user.name}}</h1>
+
+    {{#if jobs.length}}
+    <ul class="applied-jobs-list">
+      {{#each jobs}}
+      <li class="applied-job-card">
+        <strong class="job-company">{{company}}</strong> - 
+        <span class="job-position">{{position}}</span> 
+        ({{job_type}}) <br>
+
+        <span class="job-location">Location:</span> {{location}} <br>
+        <span class="job-date">Last Date Of Apply:</span> {{application_date}} <br>
+        <span class="job-type">Type:</span> {{job_type}} <br>
+        <span class="job-description">Job Description:</span> {{notes}} <br>
+
+        <form class="delete-form" action="/applied-jobs/delete" method="POST">
+          <input type="hidden" name="jobId" value="{{job_id}}">
+          <button class="delete-btn" type="submit"
+            onclick="return confirm('Are you sure you want to delete this application?')">Delete</button>
+        </form>
+      </li>
+      <hr class="divider">
+      {{/each}}
+    </ul>
+
+    {{else}}
+    <p class="no-jobs-msg">No jobs applied yet.</p>
+    {{/if}}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="/filter.css">
+</head>
+
+<body>
+  {{>navbar}}
+
+  <div class="filter-container">
+    <h2 class="filter-title">Filter Jobs</h2>
+
+    <form action="/jobs/filter" method="POST" class="filter-form">
+      <div class="form-group">
+        <label for="key">Filter Key:</label>
+        <select name="key" required>
+          <option value="company">Company</option>
+          <option value="position">Position</option>
+          <option value="location">Location</option>
+          <option value="job_type">Job Type</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="value">Value:</label>
+        <input type="text" name="value" required />
+      </div>
+
+      <div class="center-btn">
+        <button type="submit">Filter</button>
+      </div>
+
+    </form>
+
+    <hr>
+
+    <h3 class="history-title">Filter History</h3>
+
+    {{#if history.length}}
+    <ul class="history-list">
+      {{#each history}}
+      <li class="history-item">
+        <strong>{{this.key}} = {{this.value}}</strong>
+        <form action="/jobs/history/delete" method="POST" style="display:inline;">
+          <input type="hidden" name="historyId" value="{{this.id}}" />
+          <button type="submit" class="btn btn-delete">Delete</button>
+        </form>
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <p>No filter history yet.</p>
+    {{/if}}
+  </div>
+</body>
+
+</html>

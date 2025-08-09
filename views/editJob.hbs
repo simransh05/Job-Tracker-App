@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Job</title>
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/edit.css"> 
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="edit-container">
+        <h1 class="edit-title">Edit Job</h1>
+
+        <form action="/edit/{{job.job_id}}" method="POST" class="edit-form">
+            <input type="hidden" name="jobId" value="{{job.job_id}}" />
+
+            <label class="edit-label">Job Title:</label>
+            <input type="text" name="position" value="{{job.position}}" class="edit-input" required /><br>
+
+            <label class="edit-label">Company:</label>
+            <input type="text" name="company" value="{{job.company}}" class="edit-input" required /><br>
+
+            <label class="edit-label">Location:</label>
+            <input type="text" name="location" value="{{job.location}}" class="edit-input" required /><br>
+
+            <label class="edit-label">Job Type:</label>
+            <select name="job_type" class="edit-select" required>
+                <option value="Full-time" {{#ifEquals job.job_type "Full-time"}}selected{{/ifEquals}}>Full-time</option>
+                <option value="Part-time" {{#ifEquals job.job_type "Part-time"}}selected{{/ifEquals}}>Part-time</option>
+                <option value="Internship" {{#ifEquals job.job_type "Internship"}}selected{{/ifEquals}}>Internship</option>
+                <option value="Freelance" {{#ifEquals job.job_type "Freelance"}}selected{{/ifEquals}}>Freelance</option>
+            </select><br>
+
+            <label class="edit-label">Date of Application:</label>
+            <input type="date" name="application_date" value="{{job.application_date}}" class="edit-input" required /><br>
+
+            <label class="edit-label">Job Description</label>
+            <textarea name="notes" rows="4" cols="50" class="edit-textarea">{{job.notes}}</textarea><br>
+
+            <button type="submit" class="edit-button">Update Job</button>
+        </form>
+    </div>
+</body>
+</html>

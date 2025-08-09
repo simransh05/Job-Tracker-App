@@ -1,0 +1,110 @@
+/* General Page Setup */
+.signupBody {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
+/* Container */
+.signupContainer {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form */
+.signupForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px #3b82f6aa;
+}
+
+.signupBtn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.signupBtn:hover {
+    background-color: #219150;
+}
+
+/* Google Auth */
+.signupAuth {
+    margin: 20px 0;
+}
+
+.btnAuth {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.googleLink {
+    text-decoration: none;
+    color: white;
+}
+
+.btnAuth:hover {
+    background-color: #219150;
+}
+
+/* Already have an account section */
+.signupAccount {
+    margin-top: 15px;
+}
+
+.accountText {
+    margin-bottom: 8px;
+}
+
+.loginBtn {
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginLink {
+    text-decoration: none;
+    color: white;
+}
+
+.loginBtn:hover {
+    background-color: #1e70c1;
+}

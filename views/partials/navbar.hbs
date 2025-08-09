@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpsjL_ERVVa9WtmlWCWkrDevZesBjJnC1TGQ&s" alt="Job Icon" width="50" class="nav-logo" />
+    </div>
+
+    <div class="nav-center">
+        <a href="/profile" class="nav-link">Home</a>
+        <a href="/jobs/add" class="nav-link">Add Job</a>
+        <a href="/jobs/filter" class="nav-link">Filter Jobs</a>
+        <a href="/jobs/all" class="nav-link">All Jobs</a>
+        <a href="/applied-jobs" class="nav-link">Applied Jobs</a>
+    </div>
+
+    <div class="nav-right">
+        {{#if showLogout}}
+        <a href="/logout" class="nav-link">Logout</a>
+        {{/if}}
+    </div>
+</nav>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/styles/signup.css">
+</head>
+
+<body class="signupBody">
+  <div class="signupContainer">
+    <div class="signupInputs">
+      <form action="/signup" method="post" class="signupForm">
+        <input type="text" placeholder="Enter Your Name" name="username" class="inputField"><br>
+        <input type="password" name="password" class="inputField password" placeholder="Enter Password"><br>
+        <button type="submit" class="signupBtn">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="signupAuth">
+      <button class="btnAuth">
+        <a href="/auth/google" class="googleLink">Sign Up Using Google</a>
+      </button>
+    </div>
+
+    <div class="signupAccount">
+      <p class="accountText">Already Have an Account!</p>
+      <button class="loginBtn">
+        <a href="/login" class="loginLink">Login</a>
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

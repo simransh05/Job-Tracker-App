@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{user.username}}'s Profile | Job Tracker</title>
+  <link rel="stylesheet" href="/styles/profile.css">
+  <link rel="stylesheet" href="/navbar.css">
+</head>
+
+<body>
+  {{>navbar}}
+  <header class="profile-header">
+    <h1>Welcome {{user.username}}</h1>
+  </header>
+
+  <br>
+
+  <main class="profile-main">
+    <section class="job-section">
+      <h2>Your Job Applications</h2>
+      <br>
+
+      {{#if jobs.length}}
+      <table class="job-table" border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Job Type</th>
+            <th>Applied Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each jobs}}
+          <tr>
+            <td>{{this.position}}</td>
+            <td>{{this.company}}</td>
+            <td>{{this.job_type}}</td>
+            <td>{{this.application_date}}</td>
+            <td class="job-actions">
+              <a href="/edit/{{this.job_id}}">
+                <button type="button" class="edit-btn">Edit</button>
+              </a>
+              |
+              <form action="/delete" method="POST" style="display:inline;">
+                <input type="hidden" name="jobId" value="{{this.job_id}}">
+                <button type="submit" class="delete-btn"
+                  onclick="return confirm('Are you sure you want to delete this job?')">Delete</button>
+              </form>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{else}}
+      <p class="no-jobs-msg">No jobs found. Start by <a href="/add-job" class="add-job-link">adding one</a>.</p>
+      {{/if}}
+    </section>
+  </main>
+</body>
+
+
+</html>

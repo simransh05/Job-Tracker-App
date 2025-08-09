@@ -1,0 +1,58 @@
+/* Adds general spacing around the body */
+.filtered-body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper to give spacing from navbar and screen edges */
+.filtered-container {
+    max-width: 800px;
+    margin: 80px auto 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Heading style */
+.filtered-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Job list styling */
+.filtered-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filtered-item {
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* No job message */
+.filtered-no-jobs {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* Back link */
+.filtered-back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.filtered-back-link:hover {
+    text-decoration: underline;
+}
