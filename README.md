@@ -43,3 +43,4 @@ REDIRECT_URI=redirect_url
 ```bash
 node app.js
 ```
+Then open http://localhost:4000 in your browser.
